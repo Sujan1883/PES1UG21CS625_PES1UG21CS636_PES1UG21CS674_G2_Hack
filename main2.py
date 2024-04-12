@@ -20,7 +20,6 @@ HEADERS = {
 SLM = AutoModelForCausalLM.from_pretrained('TheBloke/Llama-2-7B-Chat-GGML', model_file='llama-2-7b-chat.ggmlv3.q4_K_S.bin')
 
 # Function to generate feature sets using the language model
-# Function to generate feature sets using the language model
 def generate_features(comment_feedback):
     generated_text = ''
     for word in SLM(comment_feedback, stream=True):
